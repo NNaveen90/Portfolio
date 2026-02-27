@@ -212,8 +212,8 @@ span{
     transition: all 0.3s ease;
     object-fit: cover;
     cursor: none;
-    max-height: 400px;
-    height: auto;
+    /*max-height: 400px;
+    height: auto;*/
 }  
  
 .home-img img:hover{
