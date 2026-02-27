@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome | Naveen Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.95)),
+                  url("https://static.vecteezy.com/system/resources/previews/007/278/150/non_2x/dark-background-abstract-with-light-effect-vector.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: none;
+    }
+
+    .intro-container {
+      text-align: center;
+      padding: 4rem 3rem;
+      border-radius: 2rem;
+      background: rgba(15, 23, 42, 0.7);
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    .intro-container h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-container p {
+      font-size: 1.6rem;
+      opacity: 0.85;
+      margin-bottom: 3rem;
+    }
+
+    .enter-btn {
+      font-size: 1.6rem;
+      padding: 1.2rem 3.5rem;
+      border-radius: 3rem;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: white;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(99, 102, 241, 0.45);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro-container">
+    <h1>Hi, I'm Naveen 👋</h1>
+    <p>Java Full Stack Developer | Python | Web Developer</p>
+    <button class="enter-btn" onclick="enterPortfolio()">ENTER</button>
+  </div>
+
+  <script>
+    function enterPortfolio() {
+      // change this to your main portfolio file
+      window.location.href = "portfolio.html";
+    }
+  </script>
+    <style>
+      /*================= MOON CURSOR =================  */
+      .cursor {
+          position: fixed;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 10001;
+          background: radial-gradient(circle at 30% 30%, #ffffff, #e5e7eb 40%, #94a3b8 70%);    
+          box-shadow:
+          0 0 10px rgba(255,255,255,0.9),
+          0 0 20px rgba(200,200,255,0.8),
+          0 0 40px rgba(180,180,255,0.6);
+          transform: translate(-50%, -50%);
+          transition: transform 0.05s linear;
+        }
+        /*================= FOLLOW STARS =================  */
+        .star {
+            position: fixed;
+            font-size: 14px;
+            color: gold;
+            pointer-events: none;
+            z-index: 9999;
+            text-shadow:
+            0 0 6px #ffd700,
+            0 0 12px #ffd700cc,
+            0 0 20px #ffd70099;
+            animation: starFade 0.8s linear forwards;
+        }
+    </style>
+    <script>
+        const moonCursor = document.createElement("div");
+        moonCursor.className = "cursor";
+        document.body.appendChild(moonCursor);
+
+        document.addEventListener("mousemove", (e) => {
+        // Move moon cursor
+        moonCursor.style.left = e.clientX + "px";
+        moonCursor.style.top = e.clientY + "px";
+        // Create trailing golden star
+        const star = document.createElement("div");
+        star.className = "star";
+        star.innerHTML = "★";
+        // RANDOM SIZE 
+        const size = Math.random() * 10 + 10; // 10px - 20px
+        star.style.fontSize = size + "px";
+        // RANDOM ROTATION 
+        const rotation = Math.random() * 360;
+        star.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+        star.style.left = e.clientX + "px";
+        star.style.top = e.clientY + "px";
+        document.body.appendChild(star);
+        setTimeout(() => star.remove(), 800);});
+    </script>
+</body>
+</html>
