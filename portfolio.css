@@ -493,13 +493,13 @@ span{
     }
 }
 /* ===== CERTIFICATION SECTION ===== */
-.Certificates {
+.certificates {
     padding: 5rem 9%;
     text-align: center;
     max-width: 1000px;
     margin: 100px auto;
 }
-.Certificates h2{
+.certificates h2{
     font-size:32px;
     margin-bottom: 40px;
     color: #38bdf8;
